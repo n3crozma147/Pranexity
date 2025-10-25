@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Priya Sharma",
+    "role": "Chief Medical Officer",
+    "company": "MediConnect India",
+    "image": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=300",
+    "quote": "Pranexity's telemedicine platform has revolutionized how we deliver healthcare in rural India. Their AI-powered solutions are not just cutting-edge, they're culturally sensitive and built for our communities.",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "name": "Rajesh Kumar",
+    "role": "Founder & CEO",
+    "company": "BharatLearn Academy",
+    "image": "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=300",
+    "quote": "The adaptive learning platform exceeded all expectations. Student engagement increased by 60% and test scores improved dramatically. Pranexity truly understands the Indian education landscape.",
+    "rating": 5
+  },
+  {
+    "id": 3,
+    "name": "Anita Desai",
+    "role": "VP of Digital Transformation",
+    "company": "QuickCredit Solutions",
+    "image": "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=300",
+    "quote": "From 7 days to 2 hours for loan approval. Pranexity's AI solution transformed our business. Their team's professionalism and technical expertise are unmatched in the industry.",
+    "rating": 5
+  },
+  {
+    "id": 4,
+    "name": "Vikram Patel",
+    "role": "Operations Director",
+    "company": "SmartMart Retail Chain",
+    "image": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300",
+    "quote": "The inventory intelligence system has saved us millions in lost sales and wasted inventory. Pranexity's solution is elegant, powerful, and delivered exactly on time.",
+    "rating": 5
+  },
+  {
+    "id": 5,
+    "name": "Harpreet Singh",
+    "role": "President",
+    "company": "GreenFields Cooperative",
+    "image": "https://images.pexels.com/photos/2269872/pexels-photo-2269872.jpeg?auto=compress&cs=tinysrgb&w=300",
+    "quote": "As farmers, we were skeptical about AI. But Pranexity made it simple and effective. Our yields increased by 25% and we're using 30% less water. This is the future of Indian agriculture.",
+    "rating": 5
+  },
+  {
+    "id": 6,
+    "name": "Commissioner Lakshmi Iyer",
+    "role": "Smart City Project Lead",
+    "company": "Bangalore Municipal Corporation",
+    "image": "https://images.pexels.com/photos/3756042/pexels-photo-3756042.jpeg?auto=compress&cs=tinysrgb&w=300",
+    "quote": "Pranexity's traffic management system has made a visible difference in our city. Citizens notice shorter commute times and the data-driven approach gives us confidence in scaling the solution.",
+    "rating": 5
+  }
+]

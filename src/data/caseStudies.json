@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Healthcare Revolution: AI Telemedicine",
+    "client": "MediConnect India",
+    "description": "Implemented a comprehensive telemedicine platform that connected 500+ doctors with 100,000+ patients across rural India. The AI-powered symptom checker reduced unnecessary hospital visits by 40% and improved diagnostic accuracy.",
+    "image": "https://images.pexels.com/photos/8439093/pexels-photo-8439093.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "tags": ["Healthcare", "AI", "Telemedicine", "Rural Impact"],
+    "results": "40% reduction in hospital visits, 100K+ patients served, 95% satisfaction rate",
+    "duration": "8 months"
+  },
+  {
+    "id": 2,
+    "title": "EdTech Transformation: Adaptive Learning",
+    "client": "BharatLearn Academy",
+    "description": "Developed an adaptive learning platform that personalized education for 50,000 students across 200 schools. The AI engine analyzed learning patterns and adjusted content difficulty in real-time.",
+    "image": "https://images.pexels.com/photos/8438982/pexels-photo-8438982.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "tags": ["Education", "AI", "EdTech", "Personalization"],
+    "results": "35% improvement in test scores, 50K students, 200 schools",
+    "duration": "6 months"
+  },
+  {
+    "id": 3,
+    "title": "FinTech Innovation: Smart Lending",
+    "client": "QuickCredit Solutions",
+    "description": "Built an AI-driven loan processing system that reduced approval time from 7 days to 2 hours. The system analyzed 150+ data points to assess creditworthiness with 92% accuracy.",
+    "image": "https://images.pexels.com/photos/8849295/pexels-photo-8849295.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "tags": ["Finance", "AI", "Automation", "Credit Scoring"],
+    "results": "80% faster processing, 92% accuracy, $50M loans processed",
+    "duration": "5 months"
+  },
+  {
+    "id": 4,
+    "title": "Retail Optimization: Inventory Intelligence",
+    "client": "SmartMart Retail Chain",
+    "description": "Deployed predictive inventory management across 150 stores, reducing stockouts by 60% and overstock by 45%. The system processed real-time sales data and weather patterns for accurate forecasting.",
+    "image": "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "tags": ["Retail", "AI", "Inventory", "Predictive Analytics"],
+    "results": "60% fewer stockouts, 45% less overstock, 150 stores",
+    "duration": "4 months"
+  },
+  {
+    "id": 5,
+    "title": "Agriculture Tech: Crop Intelligence",
+    "client": "GreenFields Cooperative",
+    "description": "Implemented IoT sensors and AI analytics for 5,000 farmers across Punjab and Haryana. The platform provided real-time crop health monitoring and weather-based recommendations.",
+    "image": "https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "tags": ["Agriculture", "IoT", "AI", "Sustainability"],
+    "results": "25% yield increase, 5K farmers, 30% water savings",
+    "duration": "10 months"
+  },
+  {
+    "id": 6,
+    "title": "Smart City: Traffic Management",
+    "client": "Bangalore Municipal Corporation",
+    "description": "Developed an AI-powered traffic management system that reduced congestion by 35% in key corridors. The system used computer vision and predictive modeling to optimize signal timing.",
+    "image": "https://images.pexels.com/photos/8386422/pexels-photo-8386422.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "tags": ["Smart City", "AI", "IoT", "Public Services"],
+    "results": "35% less congestion, 20% faster commutes, City-wide impact",
+    "duration": "12 months"
+  }
+]

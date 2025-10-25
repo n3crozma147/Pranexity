@@ -1,0 +1,135 @@
+[
+  {
+    "id": 1,
+    "title": "AI-Powered Telemedicine Platform",
+    "description": "Connect patients with doctors through intelligent video consultations and AI-driven symptom analysis.",
+    "icon": "Activity",
+    "category": "Healthcare"
+  },
+  {
+    "id": 2,
+    "title": "Smart Health Records",
+    "description": "Blockchain-secured electronic health records with AI-powered insights for better patient care.",
+    "icon": "FileText",
+    "category": "Healthcare"
+  },
+  {
+    "id": 3,
+    "title": "Diagnostic AI Assistant",
+    "description": "Machine learning models that assist healthcare professionals in accurate diagnosis and treatment planning.",
+    "icon": "Stethoscope",
+    "category": "Healthcare"
+  },
+  {
+    "id": 4,
+    "title": "Medication Reminder System",
+    "description": "Intelligent reminders and tracking system for medication adherence with family notifications.",
+    "icon": "Pill",
+    "category": "Healthcare"
+  },
+  {
+    "id": 5,
+    "title": "Adaptive Learning Platform",
+    "description": "Personalized education paths powered by AI that adapt to each student's learning style and pace.",
+    "icon": "GraduationCap",
+    "category": "Education"
+  },
+  {
+    "id": 6,
+    "title": "Virtual Classroom Assistant",
+    "description": "AI-powered teaching assistant that helps educators manage classrooms and engage students effectively.",
+    "icon": "Users",
+    "category": "Education"
+  },
+  {
+    "id": 7,
+    "title": "Skill Assessment Engine",
+    "description": "Automated skill evaluation and certification platform for vocational and professional training.",
+    "icon": "Award",
+    "category": "Education"
+  },
+  {
+    "id": 8,
+    "title": "Language Learning AI",
+    "description": "Conversational AI tutor for learning regional languages and English with real-time feedback.",
+    "icon": "Languages",
+    "category": "Education"
+  },
+  {
+    "id": 9,
+    "title": "Smart Loan Processing",
+    "description": "AI-driven credit assessment and loan approval system that reduces processing time by 80%.",
+    "icon": "IndianRupee",
+    "category": "Finance"
+  },
+  {
+    "id": 10,
+    "title": "Fraud Detection System",
+    "description": "Real-time transaction monitoring with machine learning to detect and prevent financial fraud.",
+    "icon": "Shield",
+    "category": "Finance"
+  },
+  {
+    "id": 11,
+    "title": "Investment Advisory AI",
+    "description": "Personalized investment recommendations based on risk profile, goals, and market analysis.",
+    "icon": "TrendingUp",
+    "category": "Finance"
+  },
+  {
+    "id": 12,
+    "title": "Digital Payment Gateway",
+    "description": "Secure, AI-enhanced payment processing with multi-language support and UPI integration.",
+    "icon": "CreditCard",
+    "category": "Finance"
+  },
+  {
+    "id": 13,
+    "title": "Intelligent Inventory Management",
+    "description": "Predictive analytics for stock management, demand forecasting, and automated reordering.",
+    "icon": "Package",
+    "category": "Retail"
+  },
+  {
+    "id": 14,
+    "title": "Customer Behavior Analytics",
+    "description": "Deep insights into shopping patterns and preferences to optimize sales and marketing strategies.",
+    "icon": "BarChart3",
+    "category": "Retail"
+  },
+  {
+    "id": 15,
+    "title": "Chatbot Sales Assistant",
+    "description": "24/7 AI-powered customer support and sales assistant with multilingual capabilities.",
+    "icon": "MessageSquare",
+    "category": "Retail"
+  },
+  {
+    "id": 16,
+    "title": "Dynamic Pricing Engine",
+    "description": "AI-optimized pricing strategies based on demand, competition, and market conditions.",
+    "icon": "Tag",
+    "category": "Retail"
+  },
+  {
+    "id": 17,
+    "title": "Smart Agriculture Platform",
+    "description": "IoT and AI solutions for crop monitoring, weather prediction, and yield optimization.",
+    "icon": "Sprout",
+    "category": "Agriculture"
+  },
+  {
+    "id": 18,
+    "title": "Supply Chain Optimization",
+    "description": "End-to-end supply chain visibility with AI-driven logistics and route optimization.",
+    "icon": "Truck",
+    "category": "Logistics"
+  },
+  {
+    "id": 19,
+    "title": "Smart City Infrastructure",
+    "description": "Integrated IoT solutions for traffic management, waste management, and public services.",
+    "icon": "Building2",
+    "category": "Smart Cities"
+  }
+]
