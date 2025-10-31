@@ -41,7 +41,7 @@ const Navbar = () => {
   <img 
     src={logo} 
     alt="Pranexity Logo" 
-    className="w-12 h-12 md:w-20 md:h-20 object-contain transition-transform hover:scale-105 bg-transparent"
+    className="w-12 h-auto md:w-20 md:h-auto object-contain transition-transform hover:scale-105 bg-transparent"
   />
 </a>
 

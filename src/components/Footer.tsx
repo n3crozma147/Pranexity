@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Sparkles } from 'lucide-react';
+import logo from '../Assetes/Pranexit_Logo.png'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,10 +11,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <Sparkles className="w-8 h-8 text-cyan-500" />
-              <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent">
-                Pranexity
-              </span>
+           <a href="/">
+            <img 
+              src={logo} 
+              alt="Pranexity Logo" 
+              className="w-20 h-auto object-contain transition-transform hover:scale-105"
+            />
+          </a>
+
             </div>
             <p className="text-gray-300 text-sm mb-4">
               AI that elevates, not just automates. Empowering communities with accessible technology.
@@ -31,7 +36,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div>
+          {/* <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">Quick Links</h3>
             <ul className="space-y-2">
               <li>
@@ -65,7 +70,7 @@ const Footer = () => {
               <li className="text-gray-300 text-sm">Financial Services</li>
               <li className="text-gray-300 text-sm">Retail Automation</li>
             </ul>
-          </div>
+          </div> */}
 
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">Contact Us</h3>
