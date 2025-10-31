@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Sparkles, ArrowRight } from 'lucide-react'; // right arrow icon in contact button
 import { motion, AnimatePresence } from 'framer-motion';
-import {logo} from '../Assetes/Pranexity_Logo.png' // import your logo here
+import logo from '../Assetes/Pranexit_Logo.png' // import your logo here
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,22 +37,14 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
-          {/* left side logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="relative">
-              {/* <Sparkles className={`w-8 h-8 ${isScrolled ? 'text-cyan-600' : 'text-white'}`} /> */}
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-teal-500 opacity-30 blur-lg"></div>
-            <a href=""><img src="Pranexity_Logo" alt="" /></a>
-            </div>
-            {/* changed pranexity logo color */ }
-            {/* <span
-            className={`text-2xl font-bold ${
-              isScrolled ? 'text-cyan-700' : 'text-white'
-              }`}
-              >
-                Pranexity
-            </span> */}
-          </Link>
+         <a href="/">
+  <img 
+    src={logo} 
+    alt="Pranexity Logo" 
+    className="w-12 h-12 md:w-20 md:h-20 object-contain transition-transform hover:scale-105 bg-transparent"
+  />
+</a>
+
 
       
           <div className="hidden md:flex items-center space-x-8">
