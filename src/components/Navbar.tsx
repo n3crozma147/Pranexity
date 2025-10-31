@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Sparkles } from 'lucide-react';
+import { Menu, X, Sparkles, ArrowRight } from 'lucide-react'; // right arrow icon in contact button
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
@@ -22,15 +22,13 @@ const Navbar = () => {
     { path: '/services', label: 'Services' },
     { path: '/case-studies', label: 'Case Studies' },
     { path: '/testimonials', label: 'Testimonials' },
-    { path: '/contact', label: 'Contact' },
+    // Removed Contact from here, added as a separate button
   ];
 
   return (
     <motion.nav
       className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white shadow-lg py-2'
-          : 'bg-transparent py-4'
+        isScrolled ? 'bg-white shadow-lg py-2' : 'bg-transparent py-4'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -38,40 +36,65 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
+          {/* left side logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="relative">
               <Sparkles className={`w-8 h-8 ${isScrolled ? 'text-cyan-600' : 'text-white'}`} />
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-teal-500 opacity-30 blur-lg"></div>
             </div>
-            <span className={`text-2xl font-bold bg-gradient-to-r from-cyan-500 via-teal-500 to-slate-700 bg-clip-text text-transparent`}>
-              Pranexity
+            {/* changed pranexity logo color */ }
+            <span
+            className={`text-2xl font-bold ${
+              isScrolled ? 'text-cyan-700' : 'text-white'
+              }`}
+              >
+                Pranexity
             </span>
           </Link>
 
+      
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`relative font-medium transition-colors ${
+
+              //changed navbar links on hover
+                className={`relative font-medium px-4 py-2 rounded-full transition-all duration-200 ${
+                  isScrolled
+                  ? // changed for white navbar background
                   location.pathname === link.path
-                    ? 'text-cyan-600'
-                    : isScrolled
-                    ? 'text-gray-700 hover:text-cyan-600'
-                    : 'text-white hover:text-cyan-200'
-                }`}
+                  ? 'bg-gradient-to-r from-cyan-500 to-teal-500 text-black shadow-md'
+                  : 'text-gray-800 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-teal-500 hover:text-black shadow-sm'
+                  : // changed for transparent navbar background
+                  location.pathname === link.path
+                  ? 'bg-white/10 text-white shadow-lg border border-white/20 backdrop-blur-md'
+                  : 'text-white hover:bg-white/10 hover:text-cyan-200 backdrop-blur-md'
+                  }`}
+
               >
                 {link.label}
-                {location.pathname === link.path && (
+                
+                {/* {location.pathname === link.path && (
                   <motion.div
                     className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-cyan-500 to-teal-500"
                     layoutId="navbar-indicator"
                   />
-                )}
+                )} */}
               </Link>
             ))}
+
+            {/* new contact us button */}
+            <Link
+              to="/contact"
+              className="ml-4 px-5 py-2 rounded-full bg-black text-white font-semibold flex items-center gap-2 hover:bg-gray-900 transition-all shadow-md"
+            >
+              Contact Us
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
 
+          {/* Mobile Menu Toggle */}
           <button
             className="md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -84,6 +107,7 @@ const Navbar = () => {
           </button>
         </div>
 
+        {/* mobile dropdown menu */}
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
@@ -107,6 +131,15 @@ const Navbar = () => {
                     {link.label}
                   </Link>
                 ))}
+
+                {/* contact us button in mobile view */}
+                <Link
+                  to="/contact"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block w-full text-center px-4 py-3 rounded-full bg-black text-white font-semibold hover:bg-gray-900 transition-all"
+                >
+                  Contact Us
+                </Link>
               </div>
             </motion.div>
           )}
