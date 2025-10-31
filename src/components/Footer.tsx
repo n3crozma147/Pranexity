@@ -29,7 +29,7 @@ const Footer = () => {
             {/* Social Links */}
             <div className="flex space-x-4">
               <a
-                href="https://www.linkedin.com/company/pranexity"
+                href="https://in.linkedin.com/company/empathytechnologies365"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -38,7 +38,7 @@ const Footer = () => {
                 <Linkedin className="w-10 h-5" />
               </a>
               <a
-                href="https://twitter.com/pranexity"
+                href="https://x.com/ETMicrosoft365"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Twitter"
@@ -65,7 +65,7 @@ const Footer = () => {
                 <Instagram className="w-10 h-5" />
               </a>
               <a
-                href="https://www.youtube.com/@pranexity"
+                href="https://www.youtube.com/@EmpathyTechnologies"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube"
@@ -74,7 +74,7 @@ const Footer = () => {
                 <Youtube className="w-10 h-5" />
               </a>
               <a
-                href="https://www.glassdoor.co.in/Overview/Working-at-Pranexity"
+                href="https://www.glassdoor.co.in/Reviews/Empathy-Technologies-Reviews-E10323350.htm"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Glassdoor"
@@ -129,7 +129,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-2 text-sm">
                 <Phone className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                <span className="text-gray-300">+91 98457 74757</span>
+                <span className="text-gray-300">98457 74757</span>
               </li>
             </ul>
           </div>
