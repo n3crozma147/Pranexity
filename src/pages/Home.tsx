@@ -3,6 +3,45 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Users, Globe, TrendingUp } from 'lucide-react';
 import Hero from '../components/Hero';
 
+import React, { useEffect, useState } from "react";
+
+const AnimatedCounter = ({ value }) => {
+  const [count, setCount] = useState(0);
+
+  const isK = value.includes("K");
+  const isPercent = value.includes("%");
+  const numericPart = parseFloat(value.replace(/[^\d.]/g, ""));
+  const target = isK ? numericPart * 1000 : numericPart;
+
+  useEffect(() => {
+    let start = 0;
+    const duration = 2000;
+    const stepTime = 10;
+    const increment = target / (duration / stepTime);
+
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= target) {
+        clearInterval(timer);
+        setCount(target);
+      } else {
+        setCount(start);
+      }
+    }, stepTime);
+
+    return () => clearInterval(timer);
+  }, [target]);
+
+  const displayValue = () => {
+    if (isK) return `${Math.floor(count / 1000)}K+`;
+    if (isPercent) return `${Math.floor(count)}%`;
+    return `${Math.floor(count)}+`;
+  };
+
+  return <div className="text-4xl md:text-5xl font-bold mb-2">{displayValue()}</div>;
+};
+
+
 const Home = () => {
   const verticals = [
     {
@@ -92,26 +131,28 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-slate-800 via-cyan-900 to-teal-900 text-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, scale: 0.5 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <stat.icon className="w-12 h-12 mx-auto mb-4" />
-                <div className="text-4xl md:text-5xl font-bold mb-2">{stat.value}</div>
-                <div className="text-lg opacity-90">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+     <section className="py-20 bg-gradient-to-br from-slate-800 via-cyan-900 to-teal-900 text-white">
+  <div className="container mx-auto px-4">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      {stats.map((stat, index) => (
+        <motion.div
+          key={stat.label}
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          className="text-center"
+        >
+          <stat.icon className="w-12 h-12 mx-auto mb-4" />
+          <AnimatedCounter value={stat.value} />
+          <div className="text-lg opacity-90">{stat.label}</div>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
 
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
