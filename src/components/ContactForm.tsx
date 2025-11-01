@@ -1,5 +1,5 @@
 import { useState, FormEvent } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Send, CheckCircle } from 'lucide-react';
 import axios from 'axios';
 
@@ -22,7 +22,7 @@ const ContactForm = () => {
       await axios.post('https://jsonplaceholder.typicode.com/posts', formData);
       setIsSuccess(true);
       setFormData({ name: '', email: '', phone: '', company: '', message: '' });
-      setTimeout(() => setIsSuccess(false), 5000);
+      setTimeout(() => setIsSuccess(false), 3000);
     } catch (error) {
       console.error('Form submission error:', error);
     } finally {
@@ -90,7 +90,7 @@ const ContactForm = () => {
             value={formData.phone}
             onChange={handleChange}
             className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors"
-            placeholder=" 98765 43210"
+            placeholder="98765 43210"
           />
         </div>
 
@@ -127,23 +127,63 @@ const ContactForm = () => {
       </div>
 
       <div className="flex items-center justify-between">
-        <button
+        <motion.button
           type="submit"
-          disabled={isSubmitting}
-          className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          disabled={isSubmitting || isSuccess}
+          whileTap={{ scale: 0.95 }}
+          animate={{
+            backgroundColor: isSuccess
+              ? '#16a34a' // green when sent
+              : 'linear-gradient(to right, #06b6d4, #0d9488)',
+            scale: isSubmitting ? 0.97 : 1,
+          }}
+          transition={{ duration: 0.3 }}
+          className={`inline-flex items-center px-8 py-4 rounded-lg font-semibold text-white ${
+            isSuccess
+              ? 'bg-green-600 hover:bg-green-700'
+              : 'bg-gradient-to-r from-cyan-500 to-teal-500 hover:shadow-lg hover:scale-105'
+          } transition-all disabled:opacity-50 disabled:cursor-not-allowed`}
         >
-          {isSubmitting ? (
-            <>
-              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-              Sending...
-            </>
-          ) : (
-            <>
-              Send Message
-              <Send className="ml-2 w-5 h-5" />
-            </>
-          )}
-        </button>
+          <AnimatePresence mode="wait">
+            {isSubmitting ? (
+              <motion.div
+                key="sending"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="flex items-center"
+              >
+                <motion.div
+                  className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"
+                  transition={{ repeat: Infinity, duration: 1 }}
+                ></motion.div>
+                Sending...
+              </motion.div>
+            ) : isSuccess ? (
+              <motion.div
+                key="sent"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0 }}
+                className="flex items-center"
+              >
+                <CheckCircle className="w-5 h-5 mr-2 text-white" />
+                Message Sent
+              </motion.div>
+            ) : (
+              <motion.div
+                key="default"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="flex items-center"
+              >
+                Send Message
+                <Send className="ml-2 w-5 h-5" />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.button>
 
         {isSuccess && (
           <motion.div
